@@ -1,0 +1,348 @@
+.internal__menu {
+    background: #F8F3F4;
+}
+
+.product__card {
+    @extend %flex-space;
+    padding: 60px 0px 60px 0px;
+
+    &__name {
+        color: $selectiveColoreSite;
+        font-size: 24px;
+        font-weight: 400;
+        @extend %minStyleParameters;
+    }
+}
+
+/* Стиль списка */
+.breadcrumb {
+    &__ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__li:not(:last-child)::after {
+        font-size: 14px;
+        content: "/\00a0";
+        padding-left: 8px;
+        padding-right: 8px;
+        @extend %minStyleParameters;
+        font-weight: 300;
+        color: #636363;
+    }
+
+    &__li:last-child .breadcrumb__link {
+        font-weight: 300;
+        color: $selectiveColoreSite;
+    }
+
+    &__link {
+        color: #636363;
+        font-size: 14px;
+        font-weight: 300;
+        @extend %minStyleParameters;
+        text-decoration: none;
+    }
+}
+
+.__card__product {
+    border: 1px solid #e9e9e9;
+    padding: 64px 16px 64px 16px;
+}
+
+.card__info {
+    margin-top: -63px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__subtitle {
+        color: $selectiveColoreSite;
+        font-size: 14px;
+        font-weight: 300;
+        @extend %minStyleParameters;
+        margin-bottom: 12px;
+    }
+
+    &__separator__devider {
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        color: #4D4D4D;
+        font-size: 18px;
+        font-weight: 300;
+        @extend %minStyleParameters;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        max-width: 555px;
+        color: #5E5E5E;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        @extend %minStyleParameters;
+        margin-bottom: 32px;
+    }
+
+    &__price {
+        color: $selectiveColoreSite;
+        font-size: 24px;
+        font-weight: 300;
+        @extend %minStyleParameters;
+        margin-bottom: 65px;
+    }
+
+    &__separator {
+        margin-bottom: 65px;
+    }
+
+    &__filter {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+        margin-bottom: 48px;
+
+        &__color {
+            color: #6F6E6E;
+            font-size: 14px;
+            @extend %minStyleParameters;
+            font-weight: 400;
+        }
+    }
+}
+
+.to__card {
+    color: $selectiveColoreSite;
+    font-size: 16px;
+    font-weight: 400;
+    @extend %minStyleParameters;
+    padding: 15px 57px 9px 24px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    align-items: center;
+    border: 2px solid $selectiveColoreSite;
+    background-color: #FFF;
+    transition: all 0.3s;
+}
+
+.to__card:hover {
+    color: #040202;
+    background: $selectiveColoreSite;
+}
+
+
+// CATALOG
+
+/* Убираем стандартный маркер Firefox */
+details>summary {
+    list-style: none;
+}
+
+.filter__sort {
+    height: 132px;
+    position: relative;
+    display: flex;
+    gap: 16px;
+}
+
+.filter {
+    padding: 13px 16px 16px;
+    width: 32%;
+    position: absolute;
+    top: 39px;
+    box-sizing: border-box;
+    z-index: 9999;
+
+    &[open] {
+        background: #FFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+
+    &[open] .filter__heading {
+        color: $selectiveColoreSite
+    }
+
+    &[open] path {
+        fill: $selectiveColoreSite
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+
+    &__heading {
+        color: $colorText;
+        font-size: 14px;
+        font-weight: 600;
+        @extend %minStyleParameters;
+    }
+
+    &__item {
+        margin-top: 16px;
+
+        &__heading__name {
+            color: #6F6E6E;
+            font-size: 14px;
+            font-weight: 400;
+            @extend %minStyleParameters;
+            padding: 8px 11px 11px 11px;
+            border-bottom: 1px solid #EBEBEB;
+            border-left: 5px solid $selectiveColoreSite;
+        }
+
+        &__link__box {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding: 24px 16px;
+        }
+
+        &__link {
+            color: #6F6E6E;
+            font-size: 14px;
+            @extend %minStyleParameters;
+            font-weight: 400;
+
+            &:hover {
+                color: $selectiveColoreSite;
+            }
+        }
+    }
+
+    &__item[open] .filter__item__heading__name {
+        color: $selectiveColoreSite
+    }
+}
+
+.sort {
+    display: flex;
+    position: absolute;
+    gap: 16px;
+    top: 39px;
+    left: 361px;
+    padding: 13px 16px 16px;
+    gap: 27px;
+    z-index: 9999;
+
+    &__details {
+        position: relative;
+
+        &[open] .sort__heading {
+            color: $selectiveColoreSite
+        }
+
+        &[open] path {
+            fill: $selectiveColoreSite
+        }
+    }
+
+    &__heading {
+        color: #6F6E6E;
+        font-size: 14px;
+        font-weight: 400;
+        @extend %minStyleParameters;
+    }
+
+    &__summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__box {
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        left: -9px;
+        top: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px
+    }
+
+    &__check {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #6F6E6E;
+        font-size: 14px;
+        font-weight: 400;
+        @extend %minStyleParameters;
+    }
+}
+
+@media (max-width: 1120px) {
+    .filter {
+        width: 48%;
+    }
+
+    .sort {
+        right: 0;
+        left: auto;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 396px) {
+    .filter {
+        width: 360px;
+
+        &__heading {
+            display: none;
+        }
+
+        &__svg {
+            width: 37.5px;
+            height: 25px;
+        }
+    }
+
+    .sort {
+        gap: 24px;
+
+        &__summary {
+            gap: 9px;
+        }
+
+        &__heading {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 395px) {
+    .filter {
+        width: 100%;
+
+        &__heading {
+            display: none;
+        }
+    }
+
+    .sort {
+        gap: 12px;
+
+        &__summary {
+            gap: 5px;
+        }
+
+        &__heading {
+            font-size: 12px;
+        }
+    }
+}
+
+.newsletter {
+    background: url(../img/photo-subscribe-2.png) bottom right no-repeat fixed;
+}
