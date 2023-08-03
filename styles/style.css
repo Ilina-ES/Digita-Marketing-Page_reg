@@ -1372,7 +1372,7 @@ body {
   }
 }
 .newsletter {
-  background: url(/img/photo-subscribe-2.png) bottom right no-repeat fixed;
+  background: url(../img/photo-subscribe-2.png) bottom right no-repeat fixed;
   background-color: rgba(244, 244, 244, 0.85);
   background-size: 100%;
   padding-top: 86px;
