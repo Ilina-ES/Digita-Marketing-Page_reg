@@ -287,6 +287,10 @@
   background: #F16D7F;
 }
 
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+  display: none
+}
 /* Убираем стандартный маркер Firefox */
 details > summary {
   list-style: none;
