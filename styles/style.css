@@ -489,7 +489,7 @@ details > summary {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 .cart__card::after {
-  content: url(/img/close__icon.svg);
+  content: url(../img/close__icon.svg);
   right: -113px;
   top: 35px;
   position: relative;
